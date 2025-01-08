@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://x6e1vm01ahj2"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_iwtok"]
+
+[sub_resource type="Theme" id="Theme_63gwr"]
+default_font_size = 28
+
+[node name="Main" type="Node"]
+script = ExtResource("1_iwtok")
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_63gwr")
+
+[node name="ColorRect" type="ColorRect" parent="UserInterface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RequestOpenDualsenseButton" type="Button" parent="UserInterface"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -23.5
+offset_right = 50.0
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Request Open DualSense"
+
+[connection signal="pressed" from="UserInterface/RequestOpenDualsenseButton" to="." method="_on_request_open_dualsense_button_pressed"]
