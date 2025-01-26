@@ -7,7 +7,10 @@ func _ready() -> void:
 	var idx = 1
 	for child in $VBoxContainer.get_children():
 		if child.is_in_group("ForceParameter"):
-			child.get_node("Label").text = "ForceParam" + str(idx)
+			var idx_str = str(idx)
+			if idx < 10:
+				idx_str = "0" + idx_str
+			child.get_node("Label").text = "ForceParam" + idx_str
 			idx +=1
 func get_parameters():
 	var mode = get_mode()
