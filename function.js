@@ -8,7 +8,6 @@ function request_open_dualsense() {
 }
 
 function send(packet) {
-console.log(packet)
   dualsense.sendReport(0x02, packet)
 }
 
