@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcj83uymvdo2v"]
+
+[ext_resource type="Script" path="res://force_parameter_container.gd" id="1_py451"]
+
+[node name="ForceParameterContainer" type="HBoxContainer" groups=["ForceParameter"]]
+size_flags_horizontal = 3
+size_flags_vertical = 4
+script = ExtResource("1_py451")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "ForceParam1"
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 255.0
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

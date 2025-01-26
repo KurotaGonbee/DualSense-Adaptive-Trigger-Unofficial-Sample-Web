@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://blwbofvlhv1ou"]
+
+[ext_resource type="Script" path="res://trigger_container.gd" id="1_nlm6j"]
+[ext_resource type="PackedScene" uid="uid://bcj83uymvdo2v" path="res://force_parameter_container.tscn" id="1_u68tj"]
+[ext_resource type="Script" path="res://mode_container.gd" id="2_srh5m"]
+
+[node name="TriggerContainer" type="MarginContainer"]
+size_flags_horizontal = 3
+script = ExtResource("1_nlm6j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ModeContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_srh5m")
+
+[node name="Label" type="Label" parent="VBoxContainer/ModeContainer"]
+layout_mode = 2
+text = "TriggerMode:"
+
+[node name="MinusButton" type="Button" parent="VBoxContainer/ModeContainer"]
+layout_mode = 2
+text = "-"
+
+[node name="ModeLabel" type="Label" parent="VBoxContainer/ModeContainer"]
+layout_mode = 2
+text = "1"
+
+[node name="PlusButton" type="Button" parent="VBoxContainer/ModeContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="ForceParameterContainer1" parent="VBoxContainer" instance=ExtResource("1_u68tj")]
+layout_mode = 2
+
+[node name="ForceParameterContainer2" parent="VBoxContainer" instance=ExtResource("1_u68tj")]
+layout_mode = 2
+
+[node name="ForceParameterContainer3" parent="VBoxContainer" instance=ExtResource("1_u68tj")]
+layout_mode = 2
+
+[node name="ForceParameterContainer4" parent="VBoxContainer" instance=ExtResource("1_u68tj")]
+layout_mode = 2
+
+[node name="ForceParameterContainer5" parent="VBoxContainer" instance=ExtResource("1_u68tj")]
+layout_mode = 2
+
+[node name="ForceParameterContainer6" parent="VBoxContainer" instance=ExtResource("1_u68tj")]
+layout_mode = 2
+
+[node name="ForceParameterContainer7" parent="VBoxContainer" instance=ExtResource("1_u68tj")]
+layout_mode = 2
+
+[node name="ForceParameterContainer8" parent="VBoxContainer" instance=ExtResource("1_u68tj")]
+layout_mode = 2
+
+[node name="ForceParameterContainer9" parent="VBoxContainer" instance=ExtResource("1_u68tj")]
+layout_mode = 2
+
+[node name="ForceParameterContainer10" parent="VBoxContainer" instance=ExtResource("1_u68tj")]
+layout_mode = 2
+
+[node name="ForceParameterContainer11" parent="VBoxContainer" instance=ExtResource("1_u68tj")]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/ModeContainer/MinusButton" to="VBoxContainer/ModeContainer" method="_on_minus_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ModeContainer/PlusButton" to="VBoxContainer/ModeContainer" method="_on_plus_button_pressed"]
